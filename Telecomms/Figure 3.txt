@@ -1,0 +1,9 @@
+sc= figure ('Name','Sine signal with noise');
+figure (sc) % ...
+x= 0 : 0.01 : 10;
+y= sin (x*2*pi);
+y= y/2;
+y = awgn(y,20);
+plot (x , y);
+axis ([0 10 -1 1]);
+% pause

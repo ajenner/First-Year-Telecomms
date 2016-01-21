@@ -1,0 +1,17 @@
+st= figure ('Name','Plotting on single figure - stem ');
+figure (st)
+x =1:9; % Let x = 1 to 9
+y= zeros (2, 9); % Let y be a 2x9 matrix of zeroes
+for k =1:9
+y (1 ,k) =k^2;
+end
+for k= -9: -1 % (while k > 10 && k < 0)
+y (2 ,(k+10)) =(k) ^2;
+end
+stem (x,y(1, :) ); % ...
+hold on
+stem (x,y(2 , :) ,'r');
+title ('Stem function ');
+axis ([0 10 0 100]) ;
+print -dpng ' stem_function . png '
+% pause
